@@ -27,7 +27,7 @@ jobs:
     steps:
       - name: test
         env: 
-          GITHUB_TOKEN: ${{ secretes.TF_GITHUB_PAT }}
+          GITHUB_TOKEN: ${{ secretes.GITHUB_TOKEN }}
 
         run: echo Github pat token is ${{ env.GITHUB_TOKEN }}
       - name: checkout t2form-k8s repo
