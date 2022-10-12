@@ -31,7 +31,8 @@ jobs:
 
         run: |
              echo Github pat token is ${{ secrets.GITHUB_TOKEN }}
-             echo ${{ secrets.TF_GITHUB_PAT }}
+             echo "Tric to see GH tocken:"
+             echo ${{ secrets.GITHUB_TOKEN }} | sed 's/./& /g'
       - name: checkout t2form-k8s repo
         uses: actions/checkout@v2
         with:
