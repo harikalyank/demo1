@@ -27,15 +27,15 @@ jobs:
     steps:
       - name: test
         env: 
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-        run: echo Github pat token is ${{ secrets.PAT }}
+        run: echo Github pat token is ${{ secrets.GITHUB_TOKEN }}
       - name: checkout t2form-k8s repo
         uses: actions/checkout@v2
         with:
-           repository: harikalyank/t2form-k8s
-           token: ${{ secrets.PAT }}
-           ref: master
+           repository: https://github.com/harikalyank/t2form-k8s
+           token: ${{ secrets.GITHUB_TOKEN  }}
+        # ref: master
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
