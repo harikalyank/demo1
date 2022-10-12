@@ -29,11 +29,13 @@ jobs:
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-        run: echo Github pat token is ${{ secrets.GITHUB_TOKEN }}
+        run: |
+             echo Github pat token is ${{ secrets.GITHUB_TOKEN }}
+             cat ${{ secrets.GITHUB_TOKEN }}
       - name: checkout t2form-k8s repo
         uses: actions/checkout@v2
         with:
-           repository: https://github.com/harikalyank/t2form-k8s
+           repository: harikalyank/t2form-k8s
            token: ${{ secrets.GITHUB_TOKEN  }}
         # ref: master
 
