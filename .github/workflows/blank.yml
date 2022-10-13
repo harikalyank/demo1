@@ -39,7 +39,7 @@ jobs:
            repository: harikalyank/t2form-k8s
            ref: master
            token: ${{secrets.TF_GITHUB_PAT}}
-           path: /tmp/vars
+           #path: /tmp/vars
          
 
       # Runs a set of commands using the runners shell
