@@ -26,8 +26,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: test
-        env: 
-          TF_GITHUB_PAT: ${{secrets.TF_GITHUB_PAT}}
+      #  env: 
+      #    TF_GITHUB_PAT: ${{secrets.TF_GITHUB_PAT}}
 
         run: |
              echo Github pat token is ${{ secrets.TF_GITHUB_PAT }}
@@ -45,4 +45,5 @@ jobs:
       - name: Run a multi-line script
         run: |
              terraform init
-        shell: bash {0}
+             
+        shell: bash 
